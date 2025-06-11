@@ -51,21 +51,7 @@ This makes the project an ideal boilerplate for secure backend applications.
 
 ## 📁 Project Structure
 
-DotNetCoreWebAPIAuthJWT/
-├── Controllers/
-│ ├── AuthController.cs
-│ └── EmployeeController.cs
-├── Models/
-│ ├── AppDbContext.cs
-│ ├── Employee.cs
-│ ├── User.cs
-│ └── RevokedToken.cs
-├── Services/
-│ ├── ITokenValidator.cs
-│ └── TokenValidator.cs
-├── Program.cs
-├── appsettings.json
-└── README.md
+<pre lang="nohighlight"><code> ``` DotNetCoreWebAPIAuthJWT/ ├── Controllers/ │ ├── AuthController.cs │ └── EmployeeController.cs ├── Models/ │ ├── AppDbContext.cs │ ├── Employee.cs │ ├── User.cs │ └── RevokedToken.cs ├── Services/ │ ├── ITokenValidator.cs │ └── TokenValidator.cs ├── Program.cs ├── appsettings.json └── README.md ``` </code></pre>
 
 ## 1. Clone the Repository
 
