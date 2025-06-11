@@ -1,8 +1,9 @@
-.NET Core Web API – CRUD with JWT Authentication and Authorization
+# .NET Core Web API – CRUD with JWT Authentication and Authorization
 
 This project is a secure .NET 8 Web API application that enables CRUD operations on Employee data, protected with JWT-based authentication and authorization. It demonstrates how to build a real-world API with secure login, token revocation, and MySQL database integration.
 
-📌 Project Description
+---
+# Project Description
 
 This project implements a RESTful API in .NET 8 that demonstrates:
 
@@ -19,8 +20,9 @@ Clean service registration using IDbContextFactory
 Developer-friendly API testing using Swagger with JWT support
 
 This makes the project an ideal boilerplate for secure backend applications.
+---
 
-🔐 Features
+## 🔐 Features
 
 ✅ JWT Authentication and Role-based Authorization
 
@@ -34,46 +36,45 @@ This makes the project an ideal boilerplate for secure backend applications.
 
 ✅ Clean Architecture using IDbContextFactory to resolve scoped lifetime issues
 
-🏗️ Tech Stack
+---
 
-.NET 8
+## 🏗️ Tech Stack
 
-Entity Framework Core
+- .NET 8
+- Entity Framework Core
+- MySQL 8+
+- JWT (JSON Web Token)
+- Swagger / Swashbuckle
+- Visual Studio or VS Code
 
-MySQL 8+
+---
 
-JWT (JSON Web Token)
-
-Swagger / Swashbuckle
-
-Visual Studio or VS Code
-
-📁 Project Structure
+## 📁 Project Structure
 
 DotNetCoreWebAPIAuthJWT/
 ├── Controllers/
-│   ├── AuthController.cs
-│   └── EmployeeController.cs
+│ ├── AuthController.cs
+│ └── EmployeeController.cs
 ├── Models/
-│   ├── AppDbContext.cs
-│   ├── Employee.cs
-│   ├── User.cs
-│   └── RevokedToken.cs
+│ ├── AppDbContext.cs
+│ ├── Employee.cs
+│ ├── User.cs
+│ └── RevokedToken.cs
 ├── Services/
-│   ├── ITokenValidator.cs
-│   └── TokenValidator.cs
+│ ├── ITokenValidator.cs
+│ └── TokenValidator.cs
 ├── Program.cs
 ├── appsettings.json
 └── README.md
 
-🛠️ Getting Started
-
-1. Clone the Repository
+## 1. Clone the Repository
 
 git clone https://github.com/yourusername/DotNetCoreWebAPIAuthJWT.git
 cd DotNetCoreWebAPIAuthJWT
 
-2. Configure Database
+---
+
+## 2. Configure Database
 
 Update the MySQL connection string in appsettings.json:
 
@@ -81,100 +82,39 @@ Update the MySQL connection string in appsettings.json:
   "DefaultConnection": "server=localhost;database=jwt_demo;user=root;password=;"
 }
 
-3. Apply Migrations and Create Database
+---
+
+## 3. Apply Migrations and Create Database
 
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 
-4. Run the Application
+---
+
+## 4. Run the Application
 
 dotnet run
 
-5. Access Swagger UI
+---
 
-Navigate to:
 
-https://localhost:{port}/swagger
+## 5. Access Swagger UI
 
-🔐 JWT Authentication Flow
+Navigate to: https://localhost:{port}/swagger
+
+---
+
+## 6. JWT Authentication Flow
 
 Register a user manually in the Users table with a hashed password
-
 Use /api/auth/login to get a JWT token
 
 Click Authorize in Swagger and enter:
-
 Bearer <your-token-here>
 
-🔄 API Endpoints
+---
 
-🔑 Auth
-
-Method
-
-Endpoint
-
-Description
-
-POST
-
-/api/auth/login
-
-Authenticates user and returns JWT
-
-👨‍💼 Employees (Protected)
-
-Method
-
-Endpoint
-
-Description
-
-GET
-
-/api/employee
-
-Get all employees
-
-GET
-
-/api/employee/{id}
-
-Get employee by ID
-
-POST
-
-/api/employee
-
-Add new employee
-
-PUT
-
-/api/employee/{id}
-
-Update employee
-
-DELETE
-
-/api/employee/{id}
-
-Delete employee
-
-GET
-
-/api/employee/search?keyword=...
-
-Search employees
-
-🔐 Using JWT in Swagger
-
-Click the Authorize button in Swagger UI
-
-Paste your token in the format:
-
-Bearer <your-token-here>
-
-📌 Notes
+## 7. Notes
 
 Users must be registered manually in the Users table.
 
@@ -183,3 +123,5 @@ Passwords should be securely hashed (e.g., using BCrypt).
 JWT tokens include a jti claim to support token revocation.
 
 Swagger UI is secured and supports Bearer tokens for testing authenticated endpoints.
+
+---
